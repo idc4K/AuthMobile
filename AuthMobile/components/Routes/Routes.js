@@ -1,18 +1,18 @@
 import React from 'react';
-import { createNativeRouteNavigator } from '@react-navigation/Route';
+import { createStackNavigator } from '@react-navigation/stack';
 import Home from '../Home/Home';
 import SignUp from '../Signup/SignUp';
 import SignIn from '../Signin/SignIn';
 
-const Route = createNativeRouteNavigator;
+const Route = createStackNavigator();
 
 const Routes = ({}) =>{
-    <NavigationContainer>
+    <Route.Navigator>
         <Route.Navigator initialRouteName='Splash'>
             <Route.Screen name="Home" component={Home}/>
             <Route.Screen name="Home" component={SignIn}/>
             <Route.Screen name="Home" component={SignUp} />
         </Route.Navigator>
-    </NavigationContainer>
+    </Route.Navigator>
 }
 export default Routes
